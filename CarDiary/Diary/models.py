@@ -14,10 +14,10 @@ class Car(models.Model):
 class TO(models.Model):
     date = models.DateTimeField(blank=True)
     whatdone = models.CharField(max_length=500, blank=True)
-    workcost = models.IntegerField(max_length=500, blank=True, default=0)
-    detailscost = models.IntegerField(max_length=500, blank=True, default=0)
-    mileage = models.IntegerField(max_length=500, blank=True)
-    vin = models.ForeignKey(Car, on_delete=models.PROTECT, related_name='Team1')
+    workcost = models.IntegerField(blank=True, default=0)
+    detailscost = models.IntegerField(blank=True, default=0)
+    mileage = models.IntegerField(blank=True)
+    vin = models.ForeignKey(Car, on_delete=models.PROTECT, related_name='VIN')
 
 
 

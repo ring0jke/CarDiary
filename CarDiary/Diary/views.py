@@ -7,5 +7,13 @@ from django.utils import timezone
 
 
 def index(request):
+    currentcar = Car.objects.get(pk=1)
+    toforcar = TO.objects.all()
+    last = TO.objects.last()
+    print(last.mileage)
 
-    return render(request, 'index2.html', {'Car': Car, 'TO': TO})
+
+
+
+
+    return render(request, 'index2.html', {'Car': Car, 'TO': TO, 'currentcar': currentcar,'toforcar': toforcar,'last': last})
