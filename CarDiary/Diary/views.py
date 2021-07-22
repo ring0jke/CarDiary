@@ -4,7 +4,7 @@ from .models import Car, TO
 from datetime import *
 from django.utils import timezone
 # Create your views here.
-
+#test
 
 def index(request):
     currentcar = Car.objects.get(pk=1)
